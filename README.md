@@ -34,7 +34,7 @@
 
 **[BlogApp]** BlogApp allows users to create personalized profiles where they can showcae their information, including a profile photo and breif bio. Users can create, edit and delete their own blog posts, sharing their insights and stories with the community.BlogApp offers a platform that fosters creativity, engagement, and connections among its users.
 <p align="center">
-  <img src="/>
+  <img src="https://github.com/binodbhusal/BlogApp/blob/data-model/images/blog_app_erd.png"/>
 </p>
 
 ## 🛠 Built With <a name="built-with"></a>
