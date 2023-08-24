@@ -70,8 +70,8 @@ group :test do
   gem 'selenium-webdriver'
   gem 'shoulda-matchers', '~> 4.5'
   gem 'webdrivers'
-end
-group :development, :test do
   gem 'factory_bot_rails'
+end
+group :development do
   gem 'rspec-rails'
 end
