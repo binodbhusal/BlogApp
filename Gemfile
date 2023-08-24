@@ -55,6 +55,7 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem 'rspec-rails'
   gem 'web-console'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
@@ -67,11 +68,8 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
+  gem 'factory_bot_rails'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers', '~> 4.5'
   gem 'webdrivers'
-  gem 'factory_bot_rails'
-end
-group :development do
-  gem 'rspec-rails'
 end
