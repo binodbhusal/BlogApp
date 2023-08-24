@@ -69,7 +69,9 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'shoulda-matchers', '~> 4.5'
 end
 group :development, :test do
   gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
