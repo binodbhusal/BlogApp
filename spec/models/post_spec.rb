@@ -16,4 +16,13 @@ RSpec.describe Post, type: :model do
       expect(recent_comments.first.created_at).to be > recent_comments.last.created_at
     end
   end
+  describe 'update post_counter' do
+    it 'updates the posts counter when a new post is created' do
+      author = create(:user)
+      expect do
+        create(:post, author: author)
+        author.reload
+      end.to change(author, :posts_counter).by(1)
+    end
+  end
 end
