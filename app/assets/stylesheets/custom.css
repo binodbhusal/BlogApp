@@ -1,0 +1,141 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Indie+Flower&family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Lobster&family=Oswald&family=Poppins:wght@300;400;500;600;700&family=Righteous&family=Roboto&display=swap');
+
+body {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #4477ce;
+}
+
+.users-container {
+  margin: 2% auto;
+  width: 80%;
+  border-radius: 4px;
+  height: 100vh;
+}
+
+.usercontainer {
+  width: 70%;
+  margin: 2% auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.usercontainer h3 {
+  margin: 2% 0;
+}
+
+.userlist {
+  margin: auto 6%;
+  border: 1.5px solid #333;
+  width: 85%;
+  border-radius: 6px;
+  padding-left: 2%;
+}
+
+.num-posts {
+  font-size: 0.8rem;
+  position: relative;
+  left: 70%;
+  top: 18%;
+}
+
+.comment-like {
+  left: 25%;
+  top: 35%;
+}
+
+.bio {
+  border: 1.5px solid #333;
+  margin: 0 15%;
+  width: 66%;
+  border-radius: 6px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+ul li {
+  padding-left: 0;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.post-title {
+  margin-left: 1%;
+  width: 50%;
+}
+
+.biopost {
+  margin-left: 1%;
+}
+
+.post-text {
+  width: 90%;
+  margin-left: -50%;
+  margin-top: 4%;
+  word-wrap: break-word;
+}
+
+.btn-see-post {
+  width: 10%;
+  padding: 0.5% 0;
+  margin-left: 45%;
+  background-color: #ffeef4;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.comment-section {
+  display: block;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.comment-section1 {
+  margin-top: 0;
+  width: 70%;
+}
+
+.comment-section p {
+  margin-left: 1%;
+}
+
+.post-item {
+  margin-bottom: 10px;
+}
+
+.full-text {
+  width: 100%;
+}
+
+.all-text {
+  width: 70%;
+  text-align: left;
+  border: 1px solid #333;
+  margin: 7% auto auto auto;
+}
+
+.all-text p {
+  margin-left: 1%;
+}
+
+.postby {
+  margin-right: 20%;
+  margin-left: 1%;
+  width: 100%;
+}
