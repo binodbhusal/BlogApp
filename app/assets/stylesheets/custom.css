@@ -139,3 +139,60 @@ ul li {
   margin-left: 1%;
   width: 100%;
 }
+
+.create-post {
+  margin-left: 70%;
+  border: 1px solid #4477ce;
+  padding: 4px 15px;
+  border-radius: 8px;
+  position: relative;
+  top: -3%;
+}
+
+.create-post:hover {
+  background-color: #c8e4b2;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+
+.new-post-container {
+  margin: 2% auto;
+  width: 60%;
+  border-radius: 4px;
+  height: 100vh;
+}
+
+.post-content {
+  margin-left: 10%;
+}
+
+.btn-create-post {
+  border: 1px solid #4477ce;
+  padding: 5px 20px;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #4477ce;
+}
+
+.btn-create-post:hover {
+  background-color: #4477ce;
+  color: #fff;
+  border: none;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.comment-like-container {
+  display: flex;
+  margin-left: 69.5%;
+  gap: 2%;
+}
+
+.btn-like {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #4477ce;
+  font-size: 1.01rem;
+  font-family: "Poppins", sans-serif;
+}
