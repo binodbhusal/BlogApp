@@ -8,7 +8,10 @@ gem 'rails-controller-testing'
 gem 'rails', '~> 7.0.7'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
+gem 'material-ui-rails'
+gem 'sassc'
 gem 'sprockets-rails'
+gem 'will_paginate'
 
 # Use PostgreSQL as the database for Active Record
 gem 'pg', '~> 1.1'
