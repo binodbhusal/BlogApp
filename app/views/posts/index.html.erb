@@ -1,1 +1,25 @@
-<h1>here is a list of posts of a given user</h1>
+<div class="users-container">
+<% if @user %>
+  <%= render partial: 'partials/user', locals: { user: @user } %>
+  <% end %>
+  <% if @posts.empty? %>
+  <p>There are currently no posts available</p>
+<% else %>
+  <ul>
+    <% @posts.each do |post| %>
+      <li class = "usercontainer bio post-item">
+      <span class="post-title"><%= link_to post.title, user_post_path(@user, post) %></span>
+      <%= render partial: 'partials/post', locals: { post: post } %>
+      </li>
+      <div class = "usercontainer bio comment-section">
+     
+      <% post.recent_comments.each do |comment| %>
+        <p>
+        <%= comment.author.name %>:<%= comment.text %></p>
+      <% end %>
+    </div>
+    <% end %>
+  </ul>
+  <%= will_paginate @posts %>
+<% end %>
+</div>
