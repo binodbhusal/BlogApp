@@ -1,1 +1,20 @@
-<h1>user details of Tom </h1
+
+<div class="users-container">
+<%= render partial: 'partials/user', locals: { user: @user } %>
+<div class = "usercontainer bio">
+
+<span class="biopost"><strong>Bio</strong> <br><%= @user.bio %> </span>
+</div>
+<ul class = "post-list">
+<% @user.recent_posts.each do |post| %>
+    <li class = "usercontainer bio post-item">
+    <span class="post-title"><%= link_to post.title, user_post_path(@user, post) %> </span><br>
+    <%= render partial: 'partials/post', locals: {post: post} %>
+    </li>
+    <% end %>
+</ul>
+<button class="btn-see-post">
+<%= link_to "See All Posts", user_posts_path(@user) %>
+</button>
+
+</div>
