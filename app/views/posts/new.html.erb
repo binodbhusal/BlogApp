@@ -1,0 +1,29 @@
+<div class = "new-post-container"> 
+<div class = "post-content">
+<p>Create new post </p>
+<%= form_with(model: [@user, @post], local: true) do |form| %>
+    <% if @post.errors.any? %>
+    <div id="error_explanation">
+    <h3><% pluralize(@post.errorr.count, "error") %> Prohibated this post from being saved:</h3>
+    <ul>
+    <% @post.errors.full_message.each do |message| %>
+        <li><%= message %> </li>
+        <% end %>
+        </ul>
+    </div>
+<%end %>
+
+<div class = "field> 
+<%= form.label :title %>
+<%= form.text_field :title, style: "width:400px; height:20px;border-radius:6px" %>
+</div>
+<div class = "field"> 
+<%= form.label :post %>
+<%= form.text_area :text, rows:10, cols:90, style: "border-radius:6px" %>
+</div>
+<div class = "actions"> 
+<%= form.submit "Create post", class: "btn-create-post"  %>
+</div>
+<% end %>
+</div>
+</div>
