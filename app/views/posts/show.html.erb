@@ -1,1 +1,21 @@
-<h1>here is a single post </h1>
+<div class="users-container">
+  
+
+  <div > 
+  <span class ="postby"><strong>Post by:</strong> <%= @post.author.name %></span>
+  <span class="num-posts comment-like">Comments:  <%= @post.comments_counter %></span>
+  <span class = "num-posts comment-like">&nbsp;Likes: <%= @post.likes_counter %></span>
+ <div class= "all-text"> 
+  <p><%= @post.text %></p>
+  </div>
+  </div>
+  <div class = "usercontainer bio comment-section comment-section1">
+     
+      <% @post.comments.each do |comment| %>
+        <p>
+        <%= comment.author.name %>:<%= comment.text %></p>
+      <% end %>
+    </div>
+  
+  </ul>
+</div>
