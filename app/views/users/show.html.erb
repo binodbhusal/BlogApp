@@ -1,10 +1,13 @@
 
 <div class="users-container">
 <%= render partial: 'partials/user', locals: { user: @user } %>
-<div class = "usercontainer bio">
+<span class="create-post"><%= link_to "Create Post", new_user_post_path(@user) %></span>
 
+<div class = "usercontainer bio">
 <span class="biopost"><strong>Bio</strong> <br><%= @user.bio %> </span>
 </div>
+
+
 <ul class = "post-list">
 <% @user.recent_posts.each do |post| %>
     <li class = "usercontainer bio post-item">

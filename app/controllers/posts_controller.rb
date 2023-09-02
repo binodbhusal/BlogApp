@@ -14,4 +14,27 @@ class PostsController < ApplicationController
   def show
     @post = Post.includes(:author, :comments).find(params[:id])
   end
+
+  def create
+    @user = User.find(params[:user_id])
+    @post = current_user.posts.new(post_params)
+    if @post.save
+      flash[:success] = 'post created successfully'
+      redirect_to user_post_path(@user, @post)
+    else
+      flash.now[:error] = 'Failed to create post'
+      render 'new'
+    end
+  end
+
+  def new
+    @user = User.find(params[:user_id])
+    @post = Post.new
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
+  end
 end

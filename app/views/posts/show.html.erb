@@ -8,6 +8,10 @@
  <div class= "all-text"> 
   <p><%= @post.text %></p>
   </div>
+  <div class="comment-like-container">
+  <%= link_to "Add a Comment", new_post_comment_path(@post) %>
+  <%= render 'partials/like' %>
+  </div>
   </div>
   <div class = "usercontainer bio comment-section comment-section1">
      
@@ -18,4 +22,5 @@
     </div>
   
   </ul>
+  
 </div>

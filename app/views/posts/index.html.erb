@@ -2,6 +2,7 @@
 <% if @user %>
   <%= render partial: 'partials/user', locals: { user: @user } %>
   <% end %>
+
   <% if @posts.empty? %>
   <p>There are currently no posts available</p>
 <% else %>
