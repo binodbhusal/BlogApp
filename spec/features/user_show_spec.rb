@@ -30,5 +30,4 @@ RSpec.feature 'UserShows', type: :feature do
       expect(page).to have_content(post.title)
     end
   end
-  
 end
