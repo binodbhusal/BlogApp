@@ -10,10 +10,6 @@ RSpec.describe 'Users', type: :request do
       get users_path
       expect(response).to render_template(:index)
     end
-    it 'includes placeholder text in the responce body ' do
-      get users_path
-      expect(response.body).to include('here is a list of users')
-    end
   end
   describe 'GET #show' do
     let(:user) { create(:user) }
@@ -29,7 +25,7 @@ RSpec.describe 'Users', type: :request do
     it 'includes placeholder text in the response body' do
       user = create(:user, name: 'Tom')
       get user_path(user)
-      expect(response.body).to include("user details of #{user.name}")
+      expect(response.body).to include(user.name.to_s)
     end
   end
 end

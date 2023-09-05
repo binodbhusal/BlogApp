@@ -15,7 +15,7 @@ RSpec.describe 'Posts', type: :request do
     it ' includes placeholder text in the response body' do
       user = create(:user)
       get user_posts_path(user)
-      expect(response.body).to include('here is a list of posts of a given user')
+      expect(response.body).to include(user.name.to_s)
     end
   end
   describe 'GEt #show' do
@@ -35,7 +35,7 @@ RSpec.describe 'Posts', type: :request do
       user = create(:user)
       post = create(:post, author: user)
       get user_post_path(user, post)
-      expect(response.body).to include('here is a single post')
+      expect(response.body).to include('Comments')
     end
   end
 end
