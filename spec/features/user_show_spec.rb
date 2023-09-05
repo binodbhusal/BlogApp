@@ -30,5 +30,15 @@ RSpec.feature 'UserShows', type: :feature do
       expect(page).to have_content(post.title)
     end
   end
-  
+  scenario "When I click to see all posts, it redirects me to the user's post's index page" do
+    visit user_path(user)
+    click_link('See All Posts')
+    expect(page).to have_current_path(user_posts_path(user))
+  end
+  scenario "When I click a user's post, it redirects me to that post's show page" do
+    user_post = create(:post, author: user)
+    visit user_path(user)
+    click_link(user_post.title)
+    expect(page).to have_current_path(user_post_path(user, user_post))
+  end
 end
