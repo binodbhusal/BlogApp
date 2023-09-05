@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :user do
     name { 'Tom' }
-    photo { 'https://unsplash.com/photos/F_-0BxGuVvo' }
+    photo { 'https://placehold.co/120x120' }
     bio { 'Teacher from Mexico' }
     posts_counter { 0 }
   end

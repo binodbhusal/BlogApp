@@ -15,6 +15,7 @@
       <div class = "usercontainer bio comment-section">
      
       <% post.recent_comments.each do |comment| %>
+
         <p>
         <%= comment.author.name %>:<%= comment.text %></p>
       <% end %>

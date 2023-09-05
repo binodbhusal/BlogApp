@@ -1,18 +1,17 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id]) if params[:user_id]
-    @posts = if @user
-               @user.posts.paginate(page: params[:page],
-                                    per_page: 10)
-             else
-               Post.paginate(
-                 page: params[:page], per_page: 10
-               )
-             end
+    posts_query = Post.includes(:author, :comments)
+      .order(created_at: :asc)
+      .paginate(page: params[:page], per_page: 10)
+
+    @posts = @user ? posts_query.where(author: @user) : posts_query
+
+    Comment.where(post_id: @posts.pluck(:id)).includes(:author)
   end
 
   def show
-    @post = Post.includes(:author, :comments).find(params[:id])
+    @post = Post.find(params[:id])
   end
 
   def create

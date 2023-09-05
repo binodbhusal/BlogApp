@@ -6,7 +6,9 @@
   <span class="num-posts comment-like">Comments:  <%= @post.comments_counter %></span>
   <span class = "num-posts comment-like">&nbsp;Likes: <%= @post.likes_counter %></span>
  <div class= "all-text"> 
+ <h4 style="margin-left:1%"><%= @post.title %> </h4>
   <p><%= @post.text %></p>
+ 
   </div>
   <div class="comment-like-container">
   <%= link_to "Add a Comment", new_post_comment_path(@post) %>
