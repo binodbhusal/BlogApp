@@ -5,6 +5,7 @@ body {
   box-sizing: border-box;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
+  margin: 0;
 }
 
 a {
@@ -195,4 +196,37 @@ ul li {
   color: #4477ce;
   font-size: 1.01rem;
   font-family: "Poppins", sans-serif;
+}
+
+nav {
+  background-color: #f9f9f9;
+  padding: 1% 0;
+  width: 53%;
+  margin: 0 25% -1.5% auto;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2%;
+}
+
+.sign {
+  margin-right: 2%;
+  border: 1px solid #4477ce;
+  padding: 3px 10px;
+  border-radius: 8px;
+}
+
+.sign:hover {
+  background-color: #c8e4b2;
+  border: none;
+  cursor: pointer;
+}
+
+.sign-container {
+  width: 26%;
+  margin: 5% auto;
+  padding: 2% 2%;
+  border-radius: 8px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
 }
