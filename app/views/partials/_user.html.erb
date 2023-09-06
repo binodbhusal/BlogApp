@@ -1,6 +1,9 @@
 <div class = "usercontainer">
+<% if user.photo.present? %>
 <%= image_tag user.photo, alt: 'User Photo' %>
-
+<% else %>
+<%= image_tag 'https://placehold.co/120x120', alt: 'Placeholder' %>
+<% end %>
 <div class="userlist">
 <%= link_to user_path(user) do %>
 <h3><%= user.name %> </h3>
