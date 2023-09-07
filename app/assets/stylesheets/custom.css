@@ -230,6 +230,7 @@ nav {
   border-radius: 8px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
 }
+
 .sign-container input[type="email"],
 .sign-container input[type="password"],
 .sign-container input[type="text"] {
