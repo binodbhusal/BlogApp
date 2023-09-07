@@ -1,10 +1,10 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Indie+Flower&family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Lobster&family=Oswald&family=Poppins:wght@300;400;500;600;700&family=Righteous&family=Roboto&display=swap');
 
 body {
   box-sizing: border-box;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
+  margin: 0;
 }
 
 a {
@@ -91,7 +91,7 @@ ul li {
 }
 
 .btn-see-post {
-  width: 10%;
+  width: 100%;
   padding: 0.5% 0;
   margin-left: 45%;
   background-color: #ffeef4;
@@ -194,5 +194,72 @@ ul li {
   cursor: pointer;
   color: #4477ce;
   font-size: 1.01rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+nav {
+  background-color: #f9f9f9;
+  padding: 1% 0;
+  width: 53%;
+  margin: 0 25% -1.5% auto;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2%;
+}
+
+.sign {
+  margin-right: 2%;
+  border: 1px solid #4477ce;
+  padding: 3px 10px;
+  border-radius: 8px;
+}
+
+.sign:hover {
+  background-color: #c8e4b2;
+  border: none;
+  cursor: pointer;
+}
+
+.sign-container {
+  width: 26%;
+  margin: 5% auto;
+  padding: 2% 2%;
+  border-radius: 8px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.sign-container input[type='email'],
+.sign-container input[type='password'],
+.sign-container input[type='text'] {
+  height: 25px;
+  width: 100%;
+  border-radius: 4px;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.btn-sign {
+  border: 1px solid #4477ce;
+  padding: 6px 14px;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #4477ce;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 2%;
+  width: 102%;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.btn-sign:hover {
+  background-color: #4477ce;
+  color: #fff;
+}
+
+::placeholder {
   font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  padding-left: 0.5%;
 }

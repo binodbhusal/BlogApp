@@ -15,6 +15,16 @@
   </head>
 
   <body>
+  <nav>
+  <% if user_signed_in? %>
+  <span class="sign"><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></span>
+ 
+  <% else %>
+
+<span class="sign"><%= link_to 'Sign in', new_user_session_path %></span>
+<span class="sign"><%= link_to 'Sign up', new_user_registration_path %></span>
+ <% end %>
+ </nav>
     <%= yield %>
   </body>
 </html>
