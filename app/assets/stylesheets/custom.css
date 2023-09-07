@@ -238,6 +238,7 @@ nav {
   border-radius: 8px;
   outline: none;
 }
+
 .btn-sign {
   margin-right: 2%;
   border: 1px solid #4477ce;
@@ -249,6 +250,7 @@ nav {
   font-size: 1rem;
   margin-top: 2%;
 }
+
 .btn-sign:hover {
   background-color: #4477ce;
   color: #fff;
