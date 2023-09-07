@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Indie+Flower&family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Lobster&family=Oswald&family=Poppins:wght@300;400;500;600;700&family=Righteous&family=Roboto&display=swap');
 
 body {
@@ -195,7 +194,7 @@ ul li {
   cursor: pointer;
   color: #4477ce;
   font-size: 1.01rem;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 nav {
@@ -229,4 +228,28 @@ nav {
   padding: 2% 2%;
   border-radius: 8px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.sign-container input[type='email'],
+.sign-container input[type='password'],
+.sign-container input[type='text'] {
+  height: 25px;
+  width: 250px;
+  border-radius: 8px;
+  outline: none;
+}
+.btn-sign {
+  margin-right: 2%;
+  border: 1px solid #4477ce;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #4477ce;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 2%;
+}
+.btn-sign:hover {
+  background-color: #4477ce;
+  color: #fff;
 }
