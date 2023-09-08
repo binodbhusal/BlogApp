@@ -91,9 +91,9 @@ ul li {
 }
 
 .btn-see-post {
-  width: 100%;
+  width: 15%;
   padding: 0.5% 0;
-  margin-left: 45%;
+  margin-left: 40%;
   background-color: #ffeef4;
   border: none;
   border-radius: 6px;
@@ -262,4 +262,26 @@ nav {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   padding-left: 0.5%;
+}
+
+.btn-delete {
+  cursor: pointer;
+  padding: 6px 15px;
+  border-radius: 8px;
+  background-color: #e5e5e5;
+  border: 1px solid #d3d3d3;
+  color: #dc3545;
+  position: absolute;
+  right: 26%;
+  margin-top: 0.4%;
+}
+
+.btn-delete:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn-del-comment {
+  margin-top: -2.8%;
+  margin-right: -3%;
 }

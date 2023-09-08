@@ -17,10 +17,14 @@
   </div>
   <div class = "usercontainer bio comment-section comment-section1">
      
-      <% @post.comments.each do |comment| %>
-        <p>
-        <%= comment.author.name %>:<%= comment.text %></p>
-      <% end %>
+  <% @post.comments.each do |comment| %>
+    <p>
+      <%= comment.author.name %>: <%= comment.text %>
+    </p>
+    <% if can? :destroy, comment %>
+      <%= button_to 'Delete', post_comment_path(@post, comment),  class:"btn-delete btn-del-comment" , method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  <% end %>
     </div>
   
   </ul>
