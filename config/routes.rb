@@ -10,4 +10,17 @@ Rails.application.routes.draw do
     resources :likes, only: [:create, :destroy]
   end
   delete 'posts/:id', to: 'posts#destroy', as: :destroy_post
+  namespace :api do
+    namespace :v1 do
+
+      resources :users do
+        resources :posts do
+          resources :comments
+        end
+      end
+      
+      root 'users#index'
+    end
+  end
+
 end
