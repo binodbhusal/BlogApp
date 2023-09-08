@@ -230,3 +230,25 @@ nav {
   border-radius: 8px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
 }
+
+.btn-delete {
+  cursor: pointer;
+  padding: 6px 15px;
+  border-radius: 8px;
+  background-color: #e5e5e5;
+  border: 1px solid #d3d3d3;
+  color: #dc3545;
+  position: absolute;
+  right: 26%;
+  margin-top: 0.4%;
+}
+
+.btn-delete:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn-del-comment {
+  margin-top: -2.8%;
+  margin-right: -3%;
+}
