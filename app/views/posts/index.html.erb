@@ -9,7 +9,7 @@
   <ul>
     <% @posts.each do |post| %>
       <li class = "usercontainer bio post-item">
-      <span class="post-title"><%= link_to post.title, user_post_path(@user, post) %></span>
+      <span class="post-title"><%= link_to post.title, user_post_path(user_id: post.author_id, id: post.id) %></span>
       <%= render partial: 'partials/post', locals: { post: post } %>
       </li>
       <div class = "usercontainer bio comment-section">

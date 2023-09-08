@@ -1,7 +1,11 @@
 <div class="post-container"> 
 <p class="post-text"><%= truncate(post.text, length: 20) %></p>
- 
+
+<% if can? :destroy, post %>
+    <%= button_to 'Delete post', destroy_post_path(post), method: :delete, class:"btn-delete" %>
+    <% end %>
+    
+  
   <p class="num-posts comment-like">Comments:  <%= post.comments_counter %></p>
   <p class = "num-posts comment-like">&nbsp;Likes: <%= post.likes_counter %></p>
- 
 </div>
