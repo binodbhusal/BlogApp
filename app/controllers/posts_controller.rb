@@ -30,9 +30,6 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    puts "@post.author_id: #{@post.author_id}"
-    puts "current_user.id: #{current_user.id}"
-
     if can?(:destroy, @post)
       @post.destroy
       redirect_to posts_path, notice: 'Post was successfully deleted'
