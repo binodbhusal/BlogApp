@@ -46,7 +46,7 @@ RSpec.describe 'Api::V1::Comments', type: :request do
               post_id: { type: :integer }
               # Add other comment parameters here
             },
-            required: ['text', 'author_id', 'post_id'] # Specify required fields
+            required: %w[text author_id post_id] # Specify required fields
           }
 
           response '201', 'comment created' do
