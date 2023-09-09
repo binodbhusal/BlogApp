@@ -19,6 +19,13 @@ class Api::V1::CommentsController < ApplicationController
     end
   end
 
+  def comments_for_post
+    @user = User.find(params[:user_id])
+    @post = @user.posts.find(params[:post_id])
+    @comments = @post.comments
+    render json: @comments, status: :ok
+  end
+
   private
 
   def comment_params
