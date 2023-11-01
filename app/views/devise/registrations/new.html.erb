@@ -1,34 +1,48 @@
-<div class="sign-container">
-<h2>Sign up</h2>
+<section class="mt-16 flex items-center justify-center">
+<div class="bg-lblack max-w-3xl  p-3 px-5 rounded-lg">
+<h2 class="w-full flex text-2xl justify-center mt-3">Register to Sign Up</h2>
+
+<div class=" mt-3 h-auto px-5">
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-  <div class="field">
+  <div class="mb-3 text-dblack">
   
-  <%= f.text_field :name, autofocus: true, autocomplete: "text", placeholder:"Username" %>
+  <%= f.text_field :name, autofocus: true, autocomplete: "text", placeholder:"Username", class:"w-[300px] rounded-lg"%>
 </div>
-  <div class="field">
+  <div class="mb-3  text-dblack">
     
-    <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"Email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"Email", class:"w-[300px] rounded-lg" %>
   </div>
 
-  <div class="field">
+  <div class="mb-3 text-dblack">
    
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em class="text-grey"><%= @minimum_password_length %> characters minimum</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password",placeholder:"Password" %>
+    <%= f.password_field :password, autocomplete: "new-password",placeholder:"Password", class:"w-[300px] rounded-lg"%>
   </div>
 
-  <div class="field">
+  <div class="mb-3 text-dblack">
     
-    <%= f.password_field :password_confirmation, autocomplete: "new-password",placeholder:"Confirm Password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",placeholder:"Confirm Password", class:"w-[300px] rounded-lg" %>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up", class:"btn-sign"  %>
+  <div class="mb-3 text-dblack">
+  
+  <%= f.text_field :photo, autofocus: true, autocomplete: "text", placeholder:"Profile image URL", class:"w-[300px] rounded-lg"%>
+</div>
+<div class="mb-3 text-dblack">
+  
+  <%= f.text_area :bio, autofocus: true, autocomplete: "text", placeholder:"Bio", class:"w-[300px] rounded-lg"%>
+</div>
+  <div class="actions mb-3">
+    <%= f.submit "Sign up", class:"bg-dblack border-1 white rounded-xl py-2 w-[300px] hover:bg-lblack transition duration 300 rounded-lg" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%- if controller_name != 'sessions' %>
+<%= link_to "Log in", new_session_path(resource_name), class: "flex justify-center" %><br />
+<% end %>
+
 </div>
+</section>
