@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, only: [:show]
   load_and_authorize_resource
+
   def index
     @user = User.find(params[:user_id]) if params[:user_id]
     posts_query = Post.includes(:author, :comments)
@@ -12,8 +14,10 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
     @current_user = current_user
+    @post = Post.find(params[:id])
+    @user = @post.author
+
   end
 
   def create
