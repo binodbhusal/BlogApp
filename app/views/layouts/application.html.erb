@@ -27,7 +27,7 @@
   
   <% if user_signed_in? %>
   <span  class="text-grey absolute right-32">Signed in as <%= current_user.name %></span>
-  <span class="sign"><%= button_to 'Sign out', destroy_user_session_path, method: :delete %></span>
+  <span class=" border-1 px-2 py-1 mr-3 rounded-lg transition duration 300  hover:text-yellow"><%= button_to 'Sign out', destroy_user_session_path, method: :delete %></span>
  
   <% else %>
   
@@ -36,7 +36,8 @@
 
  <% end %>
  </nav>
- 
+ <span class=" hidden md:inline-block absolute right-3 top-16 bg-blue py-1 px-3 rounded-full hover:bg-red
+  transition duration 500"><%= link_to 'Home', users_path, class:"font-semibold" %></span>
     <%= yield %>
   </body>
 </html>
