@@ -1,8 +1,8 @@
 <div class = "container flex w-full gap-3">
 <% if user.photo.present? %>
-<%= image_tag user.photo, alt: 'User Photo', class:"w-20 h-20 rounded-[50%]" %>
+<%= image_tag user.photo, alt: 'User Photo', class:"w-20 h-20 rounded-full" %>
 <% else %>
-<%= image_tag 'https://placehold.co/120x120', alt: 'Placeholder', class:"rounded-[50%]" %>
+<%= image_tag 'https://placehold.co/64x64', alt: 'profile', class:"w-20 h-20 bg-dark-grey mb-1 rounded-full" %>
 <% end %>
 <div class="bg-lblack rounded-lg  flex items-center justify-between w-full h-1/2">
 <%= link_to user_path(user) do %>
