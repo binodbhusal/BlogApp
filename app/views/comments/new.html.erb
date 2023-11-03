@@ -1,13 +1,12 @@
-<div class = "new-post-container"> 
-<div class = "post-content">
+<div class = "container mt-12 py-3 bg-lblack text-grey rounded-lg sm:w-1/2 flex justify-center"> 
 
 <%= form_for([@post, @comment]) do |f| %>
-  <div class="field">
-    <%= f.label :text, "Add a new Comment" %><br>
-    <%= f.text_area :text, rows: 5,cols:60, style: "border-radius:6px" %>
+  <div class="">
+    <%= f.label :text, "Add a new Comment", class:"mb-2" %><br>
+    <%= f.text_area :text, rows: 5,cols:60, class: "w-full rounded-lg text-[#000]" %>
   </div>
   <div class="actions">
-    <%= f.submit "Post Comment", class: "btn-create-post" %>
+    <%= f.submit "Post Comment", class: "bg-dblack border-1 rounded-lg py-1 text-yellow px-3 hover:bg-lblack hover:text-[#ededed]" %>
   </div>
 <% end %>
 </div>
