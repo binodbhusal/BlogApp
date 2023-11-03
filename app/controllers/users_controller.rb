@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
     @current_user = current_user
+    @users = User.where.not(id: @current_user.id).order('RANDOM()')
+    @users = [@current_user] + (@users)
+
   end
 
   def show
