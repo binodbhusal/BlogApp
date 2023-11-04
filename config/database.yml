@@ -22,8 +22,7 @@ test:
   database: blogapp_test
   username: postgres
   password: 2040
+
 production:
   <<: *default
-  database: blogapp
-  username: postgres
-  password: 2040
+  url: <%= ENV['DATABASE_URL'] %>
