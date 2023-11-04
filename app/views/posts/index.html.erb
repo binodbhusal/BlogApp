@@ -1,27 +1,27 @@
-<div class="users-container">
+<div class="mt-12">
 <% if @user %>
   <%= render partial: 'partials/user', locals: { user: @user } %>
   <% end %>
 
   <% if @posts.empty? %>
-  <p>There are currently no posts available</p>
+  <p class="text-center">There are currently no posts available.</p>
 <% else %>
-  <ul>
+  <div class = "">
     <% @posts.each do |post| %>
-      <li class = "usercontainer bio post-item">
-      <span class="post-title"><%= link_to post.title, user_post_path(user_id: post.author_id, id: post.id) %></span>
+      <div class = "container mt-3 sm:w-[75%] sm:ml-[16%] xs:w-[69%] xs:ml-[25%] px-3 bg-lblack  rounded-lg">
+      <span class="relative top-3"><%= link_to post.title, user_post_path(user_id: post.author_id, id: post.id),class:"text-red font-semibold text-lg" %></span>
       <%= render partial: 'partials/post', locals: { post: post } %>
-      </li>
-      <div class = "usercontainer bio comment-section">
+      </div>
+      <div class = "container mt-3 sm:w-[40%] sm:ml-[16%] xs:w-[69%] xs:ml-[25%] px-3 bg-lblack  rounded-lg">
      
       <% post.recent_comments.each do |comment| %>
 
-        <p>
-        <%= comment.author.name %>:<%= comment.text %></p>
+        <p class="text-sm break-words">
+        <%= comment.author.name %>: <%= comment.text %></p>
       <% end %>
     </div>
     <% end %>
-  </ul>
+  </div>
   <%= will_paginate @posts %>
 <% end %>
 </div>

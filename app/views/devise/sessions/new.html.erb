@@ -1,27 +1,41 @@
-<div class="sign-container">
-<h2>Log in</h2>
+<section class="min-h-screen flex items-center justify-center">
+<div class="bg-lblack rounded-2xl flex  max-w-2xl p-3">
+<div class="px-4 sm:w-1/2">
+<h2 class="text-white mb-4 text-2xl font-semibold mt-3">Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
+  <div class="">
     
-    <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"Email" %>
+  <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control emailtxt rounded-lg", id: "exampleFormControlInput1", placeholder: "Email" %>
+   
   </div>
 
-  <div class="field">
-    <%= f.password_field :password, autocomplete: "current-password", placeholder:"Password" %>
+  <div class="">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder:"Password",  class: "form-control emailtxt rounded-lg mt-3", id: "password"%>
+
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field">
+    <div class="mt-2">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in", class:"btn-sign" %>
+    <%= f.submit "Log in", class:"bg-dblack border-1 white rounded-xl py-2 px-32 hover:bg-lblack transition duration 300 mt-3" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
+<div class="mt-3 grid grid-cols-3 items-center hrt">
+<hr class="border-grey ">
+<p class="text-center">OR</p>
+<hr class="border-grey">
 </div>
+<div class= "text-center">
+<%= render "devise/shared/links" %></div>
+</div>
+<div class:"w-1/2">
+<%= image_tag "loginimage.png", alt: "Login-image", class:"sm:block hidden rounded-2xl ml-4", size:"300x100"%>
+</div>
+</div>
+</section>

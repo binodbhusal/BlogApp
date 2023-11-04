@@ -1,32 +1,42 @@
-<div class="users-container">
-  
+<div class = "container sm:flex sm:w-3/5 gap-3 mt-12 ">
+<span class ="">
+<% if @user.photo.present? %>
+<%= image_tag @user.photo, alt: 'User Photo', class:"w-12 h-12 rounded-[50%]" %>
+<span class="text-center"><%= @post.author.name%></span>
 
-  <div > 
-  <span class ="postby"><strong>Post by:</strong> <%= @post.author.name %></span>
-  <span class="num-posts comment-like">Comments:  <%= @post.comments_counter %></span>
-  <span class = "num-posts comment-like">&nbsp;Likes: <%= @post.likes_counter %></span>
- <div class= "all-text"> 
- <h4 style="margin-left:1%"><%= @post.title %> </h4>
-  <p><%= @post.text %></p>
- 
+<% else %>
+<%= image_tag 'https://placehold.co/64x64', alt: 'Placeholder', class:"rounded-full" %>
+<span class="text-center"><%= @post.author.name %></span>
+<% end %>
+</span>
+<div class="bg-lblack rounded-lg  justify-between w-full h-auto">
+<span class="flex justify-end mr-3 mt-1 text-sm">Comments:  <%= @post.comments_counter %>
+  &nbsp;Likes: <%= @post.likes_counter %></span>
+ <h2 class="text-center text-xl font-semibold"><%= @post.title %> </h2>
+  <p class="md:text-justify mx-3 mt-3 break-words"><%= @post.text %></p>
+  
+  <span class="flex justify-end gap-3 mr-3 mt-3 text-base"><%= link_to "Add a Comment", new_post_comment_path(@post),class:"text-yellow bg-dblack px-3 rounded-lg mb-1 " %>
+  <%= render 'partials/like' %></span>
   </div>
-  <div class="comment-like-container">
-  <%= link_to "Add a Comment", new_post_comment_path(@post) %>
-  <%= render 'partials/like' %>
   </div>
-  </div>
-  <div class = "usercontainer bio comment-section comment-section1">
+
+
+      <div class = "container mt-3 sm:w-[40%] sm:ml-[25%] xs:w-[87%] xs:ml-[7%] px-3 bg-lblack  rounded-lg">
      
   <% @post.comments.each do |comment| %>
-    <p>
+    <div class="flex justify-between">
       <%= comment.author.name %>: <%= comment.text %>
-    </p>
+
     <% if can? :destroy, comment %>
-      <%= button_to 'Delete', post_comment_path(@post, comment),  class:"btn-delete btn-del-comment" , method: :delete, data: { confirm: 'Are you sure?' } %>
-    <% end %>
+      <span><%= button_to 'Delete', post_comment_path(@post, comment),  class:"text-[#dc3545] hover:text-grey" , method: :delete, data: { confirm: 'Are you sure?' } %>
+      </span>
+    <% end %>  </div>
+
   <% end %>
+
     </div>
+   
   
-  </ul>
+
   
-</div>
+

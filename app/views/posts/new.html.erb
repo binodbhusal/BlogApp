@@ -1,6 +1,6 @@
-<div class = "new-post-container"> 
-<div class = "post-content">
-<p>Create new post </p>
+<div class = "container mt-12 py-3 bg-lblack text-grey rounded-lg sm:w-3/5 "> 
+<div class = " mx-8">
+<p class="text-grey mb-3">Create new post </p>
 <%= form_with(model: [@user, @post], local: true) do |form| %>
     <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -13,16 +13,14 @@
     </div>
 <%end %>
 
-<div class = "field> 
-<%= form.label :title %>
-<%= form.text_field :title, style: "width:400px; height:20px;border-radius:6px" %>
+<div class = "mb-3"> 
+<%= form.text_field :title, placeholder:"Title", class:"w-full sm:w-1/2 rounded-lg text-dblack" %>
 </div>
-<div class = "field"> 
-<%= form.label :post %>
-<%= form.text_area :text, rows:10, cols:90, style: "border-radius:6px" %>
+<div class = ""> 
+<%= form.text_area :text, rows:10, cols:90, placeholder:"Write your post here...", class:"w-full rounded-lg text-dblack" %>
 </div>
 <div class = "actions"> 
-<%= form.submit "Create post", class: "btn-create-post"  %>
+<%= form.submit "Create post", class: "text-blue  hover:text-red"  %>
 </div>
 <% end %>
 </div>

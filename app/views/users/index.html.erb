@@ -1,7 +1,7 @@
-<div class="users-container">
+<div class="mt-12">
 
  <% if @users.empty? %>
-    <p>there are currently no users</p>
+    <p class="text-center">there are currently no users.</p>
     <%end%>
 <% @users.each do |user| %>
     <%= render partial: 'partials/user', locals: { user: user } %>

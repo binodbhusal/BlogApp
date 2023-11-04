@@ -1,11 +1,13 @@
-<div class="post-container"> 
-<p class="post-text"><%= truncate(post.text, length: 20) %></p>
 
-<% if can? :destroy, post %>
-    <%= button_to 'Delete post', destroy_post_path(post), method: :delete, class:"btn-delete" %>
+<p class="relative top-3"><%= truncate(post.text, length: 50) %></p>
+<div class=" flex justify-end gap-3">
+
+  <span class="text-sm">Comments:  <%= post.comments_counter %></span>
+  <span class = "text-sm">&nbsp;Likes: <%= post.likes_counter %></span>
+  <span> <% if can? :destroy, post %>
+  <%= button_to 'Delete', destroy_post_path(post), method: :delete, class:"text-sm bg-[#dc3545] py-1 px-2 rounded-lg 
+  text-grey hover:bg-grey hover:text-[#dc3545] transition duration 300" %>
+  </span>
     <% end %>
-    
-  
-  <p class="num-posts comment-like">Comments:  <%= post.comments_counter %></p>
-  <p class = "num-posts comment-like">&nbsp;Likes: <%= post.likes_counter %></p>
-</div>
+  </div>
+

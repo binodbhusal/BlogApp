@@ -1,23 +1,20 @@
 
-<div class="users-container">
+<div class="mt-12">
 <%= render partial: 'partials/user', locals: { user: @user } %>
-<span class="create-post"><%= link_to "Create Post", new_user_post_path(@user) %></span>
+<div class = "container sm:w-[75%] sm:ml-[16%] xs:w-[69%] xs:ml-[25%] px-3  py-2 bg-lblack flex justify-between rounded-lg">
+<p class="w-[60%] break-words"><strong>Bio: </strong> <br><%= @user.bio %> </p>
+<p ><%= link_to "New Post", new_user_post_path(@user),class:"text-blue" %></p>
 
-<div class = "usercontainer bio">
-<span class="biopost"><strong>Bio</strong> <br><%= @user.bio %> </span>
 </div>
 
 
-<ul class = "post-list">
 <% @user.recent_posts.each do |post| %>
-    <li class = "usercontainer bio post-item">
-    <span class="post-title"><%= link_to post.title, user_post_path(@user, post) %> </span><br>
-    <%= render partial: 'partials/post', locals: {post: post} %>
-    </li>
+    <div class = "container mt-3 sm:w-[75%] sm:ml-[16%] xs:w-[69%] xs:ml-[25%] px-3 bg-lblack  rounded-lg">
+    <span class="relative top-3"><%= link_to post.title, user_post_path(@user, post),class:"text-red font-semibold text-lg" %> </span>
+    <span><%= render partial: 'partials/post', locals: {post: post} %></span>
+    </div>
     <% end %>
-</ul>
-<button class="btn-see-post">
-<%= link_to "See All Posts", user_posts_path(@user) %>
-</button>
+<%= link_to "See Posts", user_posts_path(@user), class:"bg-lblack py-1 px-3 rounded-lg border-1 text-blue absolute right-32 mt-3" %>
 
-</div>
+
+
