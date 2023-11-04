@@ -7,6 +7,7 @@ gem 'rails-controller-testing'
 gem 'cancancan'
 gem 'devise'
 gem 'rails', '~> 7.0.7'
+gem 'rswag'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'active_model_serializers', '~> 0.10.13'
 gem 'material-ui-rails'
