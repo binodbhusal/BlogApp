@@ -17,7 +17,6 @@ class PostsController < ApplicationController
     @current_user = current_user
     @post = Post.find(params[:id])
     @user = @post.author
-
   end
 
   def create
