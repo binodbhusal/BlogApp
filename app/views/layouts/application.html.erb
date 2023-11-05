@@ -25,19 +25,21 @@
   BlogApp
   </h2>
   
-  <% if user_signed_in? %>
-  <span  class="text-grey absolute right-32">Signed in as <%= current_user.name %></span>
-  <span class=" border-1 px-2 py-1 mr-3 rounded-lg transition duration 300  hover:text-yellow"><%= button_to 'Sign out', destroy_user_session_path, method: :delete %></span>
+  <% if bloguser_signed_in? %>
+  <span  class="text-grey absolute right-32">Signed in as <%= current_bloguser.name %></span>
+  <span class=" border-1 px-2 py-1 mr-3 rounded-lg transition duration 300  hover:text-yellow"><%= button_to 'Sign out', destroy_bloguser_session_path, method: :delete %></span>
  
   <% else %>
   
-<button class=" sign btn btn-dark"><%= link_to 'Sign in', new_user_session_path %></button>
-<span class="sign btn btn-dark"><%= link_to 'Sign up', new_user_registration_path %></span>
+<button class=" sign btn btn-dark"><%= link_to 'Sign in', new_bloguser_session_path %></button>
+<span class="sign btn btn-dark"><%= link_to 'Sign up', new_bloguser_registration_path %></span>
 
  <% end %>
  </nav>
  <span class=" hidden md:inline-block absolute right-3 top-16 bg-blue py-1 px-3 rounded-full hover:bg-red
-  transition duration 500"><%= link_to 'Home', users_path, class:"font-semibold" %></span>
-    <%= yield %>
+  transition duration 500"><%= link_to 'Home', blogusers_path, class:"font-semibold" %></span>
+ <div class="container text-center"> <p class="text-grey absolute top-5 text-center"><%= notice %></p>
+  <p class="text-grey"><%= alert %></p></div>
+  <%= yield %>
   </body>
 </html>

@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :authenticate_user!
+  before_action :authenticate_bloguser!
   before_action :load_and_authorize_resource
 
   protected
@@ -14,5 +14,9 @@ class ApplicationController < ActionController::Base
 
   def load_and_authorize_resource
     # Load and authorize resources as needed
+  end
+
+  def current_ability
+    @current_ability ||= ::Ability.new(current_bloguser)
   end
 end
