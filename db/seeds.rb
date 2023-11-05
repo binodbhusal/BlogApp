@@ -1,5 +1,4 @@
-User.create(
-  id: 1,
+Bloguser.create(
   name: 'Binod',
   photo: 'https://media.licdn.com/dms/image/D4D35AQEH-qv4vhcKIQ/profile-framedphoto-shrink_400_400/0/1687546729923?e=1699714800&v=beta&t=u-N7p51bihWyS2bVpfcjuCj46xGwQ5NpTAVXWzNkCro',
   bio: 'Elegant solutions to complex problems',
@@ -8,8 +7,7 @@ User.create(
   role: 'admin',
   confirmed_at: Time.now
 )
-User.create(
-  id: 2,
+Bloguser.create(
   name: 'John',
   photo: 'https://media.istockphoto.com/id/1256127007/pt/foto/close-up-portrait-of-his-he-nice-attractive-glad-cheerful-cheery-guy-pointing-forefinger-aside.jpg?s=1024x1024&w=is&k=20&c=e2ignRblm3z8vwG0k9nEYV5KIgfhqn0d3YzZ1Fnw4jQ=',
   bio: 'Innovation and creative person',
@@ -18,8 +16,7 @@ User.create(
   role: 'user',
   confirmed_at: Time.now
 )
-User.create(
-  id: 3,
+Bloguser.create(
   name: 'Selena',
   photo: 'https://cdn.pixabay.com/photo/2016/11/29/06/46/adult-1867889_1280.jpg',
   bio: 'Innovation and creative person',
@@ -28,8 +25,7 @@ User.create(
   role: 'user',
   confirmed_at: Time.now
 )
-User.create(
-  id: 4,
+Bloguser.create(
   name: 'Britney',
   photo: 'https://cdn.pixabay.com/photo/2017/07/26/16/32/woman-2542252_1280.jpg',
   bio: 'Beleive knowledge is power',
@@ -38,8 +34,7 @@ User.create(
   role: 'user',
   confirmed_at: Time.now
 )
-User.create(
-  id: 5,
+Bloguser.create(
   name: 'Joana',
   photo: 'https://cdn.pixabay.com/photo/2017/03/17/04/07/woman-2150881_1280.jpg',
   bio: 'Humble and tech enthusiasts',
@@ -48,8 +43,7 @@ User.create(
   role: 'user',
   confirmed_at: Time.now
 )
-User.create(
-  id: 6,
+Bloguser.create(
   name: 'Alex',
   photo: 'https://media.istockphoto.com/id/1431057864/pt/foto/modern-business-man-in-casual-blue-shirt-standing-with-crossed-arms-on-blue-background.jpg?s=1024x1024&w=is&k=20&c=GmqCn0uhIDYSJQnWbwQCz6TI53tTZdQdP_VPJN6tIXU=',
   bio: 'Innovation and creative person',
@@ -84,7 +78,7 @@ Post.create(
 )
 Post.create(
   author_id: 2,
-  title: "Am overview of Web Development",
+  title: "An overview of Web Development",
   text: "Web development is the process of building and maintaining websites and web 
   applications that are accessible over the internet. It encompasses a wide range of tasks 
   and technologies to create, design, develop, and manage web-based software and content. 
