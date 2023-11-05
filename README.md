@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 <div align="center">
 
-  <h3><b>Welcome to Our project</b></h3>
+  <h3><b>Welcome to BlogApp Project</b></h3>
 
 </div>
 
@@ -13,7 +13,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-    - [💻 Demo video](#demo-video)
+    - [💻 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -36,17 +36,28 @@
 </p>
 
 ## 🛠 Built With <a name="built-with"></a>
-
+- Ruby on Rails: BlogApp is built on the Ruby on Rails framework, a robust and scalable web application framework known for its simplicity and productivity.
+- HTML/CSS: The user interface of BlogApp is created using HTML for structuring the content and TailwindCSS for styling, ensuring a visually appealing and responsive design.
+- JavaScript: JavaScript is used to add interactivity to the application, enabling features like dynamic forms and user-friendly interactions.
+- Database: PostgreSQL  relational database management system (RDBMS) is used to store user data, posts, and other essential information securely.
+- Devise: Devise, a popular authentication solution for Rails, is used to handle user authentication, registration, and sessions.
+- Testing: RSpec and Capybara, popular testing frameworks for Rails applications used for unit and feature testing.
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Server</summary>
+  <summary>Client/Server</summary>
   <ul>
     <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+    <li><a href="https://rspec.info//">Rspec</a></li>
   </ul>
 </details>
 
-
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
@@ -59,11 +70,8 @@
 
 <!-- Demo -->
 
-### Video demo <a name="demo-video"></a>
-
-Currently not available 
-
-<a href=>Video demo</a>
+## 🚀 Live Demo <a name="live-demo"></a>
+[ Live Demo Link](https://blogapp-5efk.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
