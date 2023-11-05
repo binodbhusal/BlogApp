@@ -1,8 +1,8 @@
 # config/routes.rb
 Rails.application.routes.draw do
-  devise_for :users
-  root 'users#index'
-  resources :users, only: [:index, :show] do
+  devise_for :blogusers
+  root 'blogusers#index'
+  resources :blogusers, only: [:index, :show] do
     resources :posts, only: [:index, :show, :new, :create, :destroy]
   end
   resources :posts do
@@ -12,13 +12,13 @@ Rails.application.routes.draw do
   delete 'posts/:id', to: 'posts#destroy', as: :destroy_post
   namespace :api do
     namespace :v1 do
-      resources :users do
+      resources :blogusers do
         resources :posts do
           get 'comments', to: 'comments#comments_for_post'
         end
       end
   
-      root 'users#index'
+      root 'blogusers#index'
     end
   end
   
