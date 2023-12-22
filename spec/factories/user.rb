@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :user do
+  factory :bloguser do
     name { 'Tom' }
     photo { 'https://placehold.co/120x120' }
     bio { 'Teacher from Mexico' }
